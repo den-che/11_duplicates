@@ -1,7 +1,11 @@
 # Anti-Duplicator
+Описание 
 
-[TODO. There will be project description]
+Скрипт в указанной директории просматривает все файлы и папки, также подпапки и выводит информацию о файлах-дубликаха.
 
-# Project Goals
+# Описание
+Для получение данных необходимо запустить скрипт(обязательно указать путь до нужно в папке в командной строке)
+<p><pre><code>python duplicates.py [путь до папки]</code></pre><p>
+После выполнения скрипт выдаст все файлы которые повторяются в этой директории и её поддиректориях
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
