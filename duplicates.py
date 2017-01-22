@@ -4,8 +4,8 @@ import filecmp
 import sys
 
 def are_files_duplicates(file_path1,file_path2):
-    difference_files = filecmp.cmp(file_path1,file_path2)
-    return  difference_files    
+    duplicate = filecmp.cmp(file_path1,file_path2)
+    return  duplicate    
 
 def get_files(root):
     files_list = []
@@ -15,12 +15,12 @@ def get_files(root):
     return files_list        
 
 if __name__ == '__main__':
-    files =  []
     root = sys.argv[1]
+
     files = get_files(root) 
     for file1, file2 in itertools.combinations(files,2):
         if (are_files_duplicates(file1,file2)):
-            print("Файл {} есть в папке {}".format(file1,file2))
+            print("Файл {} имеет дубль {}".format(file1,file2))
 
     
 
