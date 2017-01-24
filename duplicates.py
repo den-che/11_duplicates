@@ -2,6 +2,7 @@ import os
 import itertools
 import filecmp
 import sys
+import argparse
 
 def are_files_duplicates(file_path1,file_path2):
     duplicate = filecmp.cmp(file_path1,file_path2)
@@ -15,12 +16,15 @@ def get_files(root):
     return files_list        
 
 if __name__ == '__main__':
-    root = sys.argv[1]
-
-    files = get_files(root) 
-    for file1, file2 in itertools.combinations(files,2):
-        if (are_files_duplicates(file1,file2)):
-            print("Файл {} имеет дубль {}".format(file1,file2))
+    parser = argparse.ArgumentParser("Поиск дубликатов")
+    parser.add_argument('--path', help='Папка для поиска дубликатов', required=True)
+    args = parser.parse_args()
+    root = args.path
+    if (root):
+        files = get_files(root) 
+        for file1, file2 in itertools.combinations(files,2):
+            if (are_files_duplicates(file1,file2)):
+                print("Дублика ты найдены: {}        {}".format(file1,file2))
 
     
 
