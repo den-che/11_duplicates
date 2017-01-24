@@ -6,8 +6,8 @@
 #Пример
 <p><pre><code>
 C:\projects\devman\11_duplicates>python duplicates.py --path C:\work_dir
-Дублика ты найдены: C:\work_dir\scripts\test.txt        C:\work_dir\scripts\Assignment1_week2\tets\test.txt
-Дублика ты найдены: C:\work_dir\scripts\Assignment1_week2\tets\text\32423\test1.txt        C:\work_dir\scripts\trw\tst\test1.txt
+Дубликаты найдены: C:\work_dir\scripts\test.txt        C:\work_dir\scripts\Assignment1_week2\tets\test.txt
+Дубликаты найдены: C:\work_dir\scripts\Assignment1_week2\tets\text\32423\test1.txt        C:\work_dir\scripts\trw\tst\test1.txt
 </code></pre></p>
 
 # Описание
